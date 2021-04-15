@@ -3,7 +3,7 @@ from urllib.request import urlopen
 from sys import argv, exit
 
 
-parser=argparse.ArgumentParser(description='''[*] Usage: python(3) clickjacking_tester.py <file_name> ''',epilog="""Made by @Ashutosh""")
+parser=argparse.ArgumentParser(description='''[*] Usage: python(3) clickvulnr.py <file_name> ''',epilog="""Made by @Ashutosh""")
 
 def check(url):
 
@@ -31,7 +31,6 @@ def main():
 
         if status:
             print(" [+] Website is vulnerable!")
-            print(" [*] Created a poc and saved to <URL>.html")
 
         elif not status: print(" [-] Website is not vulnerable!")
         else: print('Every single thing is crashed, Python got mad, dude wtf you just did?')
